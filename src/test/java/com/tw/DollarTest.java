@@ -35,4 +35,19 @@ public class DollarTest {
         Dollar anotherOneDollar = new Dollar(1);
         assertEquals(new Dollar(2), oneDollar.plus(anotherOneDollar));
     }
+
+    @Test
+    public void one_dollar_plus_two_dollar_multiply_two() throws Exception {
+        Dollar oneDollar = new Dollar(1);
+        Dollar twoDollar = new Dollar(2);
+        assertEquals(new Dollar(6), oneDollar.plus(twoDollar).multiply(2));
+    }
+
+    @Test
+    public void test_multiple_addition() throws Exception {
+        Dollar oneDollar = new Dollar(1);
+        Dollar twoDollars = new Dollar(2);
+        Dollar threeDollars = new Dollar(3);
+        assertEquals(new Dollar(6), oneDollar.plus(twoDollars).plus(threeDollars));
+    }
 }
