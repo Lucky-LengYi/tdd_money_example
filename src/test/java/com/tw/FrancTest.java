@@ -30,4 +30,10 @@ public class FrancTest {
     public void test_one_franc_multiply_two() throws Exception {
         assertEquals(new Franc(2), new Franc(1).multiply(2));
     }
+
+    @Test
+    public void test_franc_currency() throws Exception {
+        assertEquals("CHF", new Franc(1).getCurrency());
+    }
+
 }

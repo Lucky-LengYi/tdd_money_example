@@ -22,4 +22,8 @@ public class Franc extends Money{
     Franc multiply(int multiplier) {
         return new Franc(this.amount * multiplier);
     }
+
+    String getCurrency() {
+        return "CHF";
+    }
 }

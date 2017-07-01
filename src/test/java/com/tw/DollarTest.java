@@ -50,4 +50,10 @@ public class DollarTest {
         Dollar threeDollars = new Dollar(3);
         assertEquals(new Dollar(6), oneDollar.plus(twoDollars).plus(threeDollars));
     }
+
+    @Test
+    public void test_dollar_currency() throws Exception {
+        assertEquals("USD", new Dollar(1).getCurrency());
+    }
+
 }
