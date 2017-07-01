@@ -1,10 +1,8 @@
 package com.tw;
 
-public class Franc {
-    private int amount;
-
+public class Franc extends Money{
     Franc(int amount) {
-        this.amount = amount;
+        super(amount);
     }
 
     @Override
@@ -15,11 +13,6 @@ public class Franc {
         Franc franc = (Franc) o;
 
         return amount == franc.amount;
-    }
-
-    @Override
-    public int hashCode() {
-        return amount;
     }
 
     Franc plus(Franc addend) {
