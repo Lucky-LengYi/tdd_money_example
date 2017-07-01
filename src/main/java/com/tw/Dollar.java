@@ -3,7 +3,7 @@ package com.tw;
 public class Dollar extends Money {
 
     Dollar(int amount) {
-        super(amount);
+        super(amount, "USD");
     }
 
     Dollar multiply(int multiplier) {
@@ -21,9 +21,5 @@ public class Dollar extends Money {
 
     public Dollar plus(Dollar addend) {
         return new Dollar(this.amount + addend.amount);
-    }
-
-    String getCurrency() {
-        return "USD";
     }
 }

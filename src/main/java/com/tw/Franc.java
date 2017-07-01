@@ -1,8 +1,9 @@
 package com.tw;
 
 public class Franc extends Money{
+
     Franc(int amount) {
-        super(amount);
+        super(amount, "CHF");
     }
 
     @Override
@@ -21,9 +22,5 @@ public class Franc extends Money{
 
     Franc multiply(int multiplier) {
         return new Franc(this.amount * multiplier);
-    }
-
-    String getCurrency() {
-        return "CHF";
     }
 }
