@@ -21,4 +21,12 @@ public class Franc {
     public int hashCode() {
         return amount;
     }
+
+    Franc plus(Franc addend) {
+        return new Franc(this.amount + addend.amount);
+    }
+
+    Franc multiply(int multiplier) {
+        return new Franc(this.amount * multiplier);
+    }
 }
