@@ -28,4 +28,11 @@ public class DollarTest {
         Dollar oneDollar = new Dollar(1);
         assertEquals(new Dollar(3), oneDollar.multiply(3));
     }
+
+    @Test
+    public void one_dollar_plus_one_dollar_equals_two_dollar() throws Exception {
+        Dollar oneDollar = new Dollar(1);
+        Dollar anotherOneDollar = new Dollar(1);
+        assertEquals(new Dollar(2), oneDollar.plus(anotherOneDollar));
+    }
 }
