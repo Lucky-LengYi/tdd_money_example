@@ -8,32 +8,32 @@ import static org.junit.Assert.assertNotEquals;
 public class FrancTest {
     @Test
     public void test_one_franc_equals_one_franc() throws Exception {
-        assertEquals(new Franc(1), new Franc(1));
+        assertEquals(Money.franc(1), Money.franc(1));
     }
 
     @Test
     public void test_one_franc_not_equals_two_francs() throws Exception {
-        assertNotEquals(new Franc(1), new Franc(2));
+        assertNotEquals(Money.franc(1), Money.franc(2));
     }
 
     @Test
     public void test_one_franc_plus_one_franc() throws Exception {
-        assertEquals(new Franc(2), new Franc(1).plus(new Franc(1)));
+        assertEquals(Money.franc(2), Money.franc(1).plus(Money.franc(1)));
     }
 
     @Test
     public void test_one_franc_plus_two_franc() throws Exception {
-        assertEquals(new Franc(3), new Franc(1).plus(new Franc(2)));
+        assertEquals(Money.franc(3), Money.franc(1).plus(Money.franc(2)));
     }
 
     @Test
     public void test_one_franc_multiply_two() throws Exception {
-        assertEquals(new Franc(2), new Franc(1).multiply(2));
+        assertEquals(Money.franc(2), Money.franc(1).times(2));
     }
 
     @Test
     public void test_franc_currency() throws Exception {
-        assertEquals("CHF", new Franc(1).getCurrency());
+        assertEquals("CHF", Money.franc(1).getCurrency());
     }
 
 }
